@@ -24,14 +24,9 @@ public class EventFragment extends android.support.v4.app.Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        mEvents = new ArrayList<>();
+        mEvents = new ArrayList<EventPOJO>();
 
-        for(int i = 0; i < 20; i++){
-            EventPOJO sampleEvent1 = new EventPOJO();
-//            sampleEvent1.setEventImage(R.drawable.queen);
-            sampleEvent1.setTitle("QUEEN PROGRAM");
-            mEvents.add(sampleEvent1);
-        }
+
 
 
         mEventDetailAdapter = new EventDetailAdapter(getActivity(), mEvents);
