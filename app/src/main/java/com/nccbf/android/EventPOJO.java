@@ -1,36 +1,87 @@
 package com.nccbf.android;
 
-import java.util.Date;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.Iterator;
 
 /**
  * Created by nanden on 2/19/15.
  */
 public class EventPOJO {
 
-    private Date mStartDate;
-    private Date mEndDate;
+    private String mStartDate;
+    private String mEndDate;
     private String mTitle;
-    private Integer mLocation;
+    private String mLocation;
     private String mDescription;
     private String mId;
     private String mEventImageResource;
 
-    public Date getStartDate()
+    public EventPOJO() {
+
+    }
+
+    public EventPOJO(JSONObject jsonObject) {
+
+        Iterator<String> jsonKeys = jsonObject.keys();
+
+        while (jsonKeys.hasNext()) {
+
+            String currentJsonKey = jsonKeys.next();
+
+            try {
+                switch (currentJsonKey) {
+
+                    case ("name"):
+                        mTitle = jsonObject.getString(currentJsonKey);
+                        break;
+
+                    case ("start_at"):
+                        mStartDate = jsonObject.getString(currentJsonKey);
+                        break;
+
+                    case ("end_at"):
+                        mEndDate = jsonObject.getString(currentJsonKey);
+                        break;
+
+                    case ("location_id"):
+                        mLocation = jsonObject.getString(currentJsonKey);
+                        break;
+
+                    case ("image_name"):
+                        mEventImageResource = jsonObject.getString(currentJsonKey);
+                        break;
+
+                    case ("description"):
+                        mDescription = jsonObject.getString(currentJsonKey);
+                        break;
+
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+        }
+
+    }
+
+    public String getStartDate()
     {
         return mStartDate;
     }
 
-    public void setStartDate(Date startDate)
+    public void setStartDate(String startDate)
     {
         mStartDate = startDate;
     }
 
-    public Date getEndDate() {
+    public String getEndDate() {
 
         return mEndDate;
     }
 
-    public void setEndDate(Date endDate)
+    public void setEndDate(String endDate)
     {
         mEndDate = endDate;
     }
@@ -45,12 +96,12 @@ public class EventPOJO {
         mTitle = title;
     }
 
-    public Integer getLocation()
+    public String getLocation()
     {
         return mLocation;
     }
 
-    public void setLocation(Integer location)
+    public void setLocation(String location)
     {
         mLocation = location;
     }
@@ -72,7 +123,7 @@ public class EventPOJO {
 
     public void setId(int id)
     {
-       mId = Integer.toString(id);
+        mId = Integer.toString(id);
     }
 
     public String getEventImage(){

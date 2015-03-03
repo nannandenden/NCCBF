@@ -46,11 +46,6 @@ public class MyAsyncTask extends AsyncTask{
 
 
     @Override
-    protected void onPreExecute() {
-        super.onPreExecute();
-    }
-
-    @Override
     protected void onPostExecute(Object o) {
         super.onPostExecute(o);
     }
@@ -89,18 +84,18 @@ public class MyAsyncTask extends AsyncTask{
                     Date startDate = simpleDateFormat.parse(jRealObject.getString("start_at"));
                     Date endDate = simpleDateFormat.parse(jRealObject.getString("end_at"));
 
-                String title = jRealObject.getString("name");
-                Integer location = jRealObject.getInt("location_id"); //int
-                String image = jRealObject.getString("image_name");       //string
-                String discription = jRealObject.getString("description");
+                    String name = jRealObject.getString("name");
+                    String location_id = jRealObject.getString("location_id");
+                    String image_name = jRealObject.getString("image_name");       //string
+                    String discription = jRealObject.getString("description");
 
-                eventPOJO.setStartDate(startDate);
-                eventPOJO.setEndDate(endDate);
-                eventPOJO.setTitle(title);
-                eventPOJO.setLocation(location);
-//                eventPOJO.getEventImage(image);
-                eventPOJO.setDescription(discription);
-                eventPOJOs.add(eventPOJO);
+//                eventPOJO.setStartDate(startDate);
+//                eventPOJO.setEndDate(endDate);
+//                eventPOJO.setTitle(name);
+//                eventPOJO.setLocation(location_id);
+////                eventPOJO.getEventImage(image_name);
+//                eventPOJO.setDescription(discription);
+//                eventPOJOs.add(eventPOJO);
 
                 } catch (ParseException e) {
                     e.printStackTrace();
@@ -121,6 +116,11 @@ public class MyAsyncTask extends AsyncTask{
         mOnDataReturnListener.onDataReturn(eventPOJOs);
         return new Object();
     }
+
+//    @Override
+//    protected void onPreExecute(Boolean result) {
+//        super.onPreExecute();
+//    }
 }
 
 

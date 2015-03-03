@@ -31,21 +31,21 @@ public class MainActivity extends ActionBarActivity {
 
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
-        MyAsyncTask task = new MyAsyncTask(this, new MyAsyncTask.OnDataReturnListener() {
-            @Override
-            //myasync task happens in the background, gets called when asynctast finishs
-            public void onDataReturn(List<EventPOJO> data) {
-                mEventPojos = data;
-
-                EventPOJO poj = mEventPojos.get(0);
-                poj.getTitle();
-
-
-            }
-        });
-
-
-        task.execute(new Object());
+//        MyAsyncTask task = new MyAsyncTask(this, new MyAsyncTask.OnDataReturnListener() {
+//            @Override
+//            //myasync task happens in the background, gets called when asynctast finishs
+//            public void onDataReturn(List<EventPOJO> data) {
+//                mEventPojos = data;
+//
+//                EventPOJO poj = mEventPojos.get(0);
+//                poj.getTitle();
+//
+//
+//            }
+//        });
+//
+//
+//        task.execute(new Object());
 
         mTabsAdapter = new TabsAdapter(this, mViewPager);
 
@@ -53,9 +53,9 @@ public class MainActivity extends ActionBarActivity {
 
         mTabsAdapter.addTab(actionBar.newTab().setIcon(R.drawable.ic_launcher), ScheduleFragment.class, null);
 
-        mTabsAdapter.addTab(actionBar.newTab().setIcon(R.drawable.ic_launcher), SocialMediaFragment.class, null);
-
         mTabsAdapter.addTab(actionBar.newTab().setIcon(R.drawable.ic_launcher), MapFragment.class, null);
+
+        mTabsAdapter.addTab(actionBar.newTab().setIcon(R.drawable.ic_launcher), SocialMediaFragment.class, null);
 
         mViewPager.setAdapter(mTabsAdapter);
 

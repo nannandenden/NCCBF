@@ -9,8 +9,9 @@
         android:id="@+id/single_event_info_iv"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:src="@drawable/queen"
         />
+        <!--android:src="@drawable/queen"-->
+
 
     <TextView
         android:id="@+id/single_event_location_tv"

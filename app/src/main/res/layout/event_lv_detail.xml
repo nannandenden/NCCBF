@@ -10,7 +10,6 @@
         android:id="@+id/event_detail_iv"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:src="@drawable/queen"
         />
 
     <TextView

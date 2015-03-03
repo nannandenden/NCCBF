@@ -33,6 +33,7 @@ public class SingleScheduleActivity extends Activity {
         ListView listView = (ListView)findViewById(R.id.single_schedule_event_lv);
 
         mEvents = new ArrayList<>();
+
         for(int i = 0; i < 20; i++){
             EventPOJO sampleEvent1 = new EventPOJO();
             sampleEvent1.setTitle("JCCCNC Stage");
