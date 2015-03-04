@@ -19,6 +19,11 @@ public class SocialMediaFragment extends android.support.v4.app.Fragment {
     private List<SocialMediaPOJO> mEvents;
 
     @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         mEvents = new ArrayList<>();
@@ -30,18 +35,18 @@ public class SocialMediaFragment extends android.support.v4.app.Fragment {
         mEvents.add(sampleEvent1);
 
         SocialMediaPOJO sampleEvent2 = new SocialMediaPOJO();
-        sampleEvent1.setSocialMediaIcon(R.drawable.ic_launcher);
-        sampleEvent1.setTextView("Instagram");
+        sampleEvent2.setSocialMediaIcon(R.drawable.ic_launcher);
+        sampleEvent2.setTextView("Instagram");
         mEvents.add(sampleEvent2);
 
         SocialMediaPOJO sampleEvent3 = new SocialMediaPOJO();
-        sampleEvent1.setSocialMediaIcon(R.drawable.ic_launcher);
-        sampleEvent1.setTextView("Twitter");
+        sampleEvent3.setSocialMediaIcon(R.drawable.ic_launcher);
+        sampleEvent3.setTextView("Twitter");
         mEvents.add(sampleEvent3);
 
         SocialMediaPOJO sampleEvent4 = new SocialMediaPOJO();
-        sampleEvent1.setSocialMediaIcon(R.drawable.ic_launcher);
-        sampleEvent1.setTextView("About");
+        sampleEvent4.setSocialMediaIcon(R.drawable.ic_launcher);
+        sampleEvent4.setTextView("About");
         mEvents.add(sampleEvent4);
 
 

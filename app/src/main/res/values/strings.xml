@@ -5,6 +5,11 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="pager_stripe_title">page1</string>
+    <string name="schedule_fragment">Schedule</string>
+    <string name="event_fragment">Events</string>
+    <string name="social_media_fragment">Social Media</string>
+    <string name="map_fragment">Map</string>
+    <string name="welcome_message">Welcome</string>
 
 
 </resources>

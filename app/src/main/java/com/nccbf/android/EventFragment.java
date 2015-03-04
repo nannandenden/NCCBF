@@ -33,6 +33,7 @@ public class EventFragment extends android.support.v4.app.Fragment{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getActivity().setTitle(R.string.welcome_message);
         mHandler = new Handler();
     }
 

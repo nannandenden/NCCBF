@@ -31,6 +31,7 @@ public class MainActivity extends ActionBarActivity {
 
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
+
 //        MyAsyncTask task = new MyAsyncTask(this, new MyAsyncTask.OnDataReturnListener() {
 //            @Override
 //            //myasync task happens in the background, gets called when asynctast finishs
@@ -61,6 +62,7 @@ public class MainActivity extends ActionBarActivity {
 
 
     }
+
 
 
     public static class TabsAdapter extends FragmentStatePagerAdapter

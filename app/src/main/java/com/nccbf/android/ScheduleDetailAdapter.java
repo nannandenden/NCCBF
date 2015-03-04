@@ -32,8 +32,9 @@ public class ScheduleDetailAdapter extends ArrayAdapter<EventPOJO> {
         TextView textView1 = (TextView) newView.findViewById(R.id.event_start_tv);
         TextView textView2 = (TextView) newView.findViewById(R.id.event_end_tv);
         TextView textView3 = (TextView) newView.findViewById(R.id.event_name_tv);
-//        textView1.setText(event.getStartDate().toString());
-//        textView2.setText(event.getEndDate().toString());
+
+        textView1.setText(event.getStartDate());
+        textView2.setText(event.getEndDate());
         textView3.setText(event.getTitle());
         return newView;
     }
