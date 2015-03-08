@@ -18,6 +18,10 @@ import java.util.List;
  */
 public class EventDetailAdapter extends ArrayAdapter <EventPOJO> {
 
+    //yo
+    //yoyo
+
+
     private Context mContext;
     private List<EventPOJO> mEvents;
 
