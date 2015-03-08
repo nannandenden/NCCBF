@@ -6,12 +6,12 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/nccbf_logo"
         android:label="@string/app_name"
         android:theme="@style/Theme.AppCompat"
         >
         <activity
-            android:name="com.nccbf.android.MainActivity"
+            android:name=".activity.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,11 +20,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SingleEventInfoActivity"
+            android:name=".activity.SingleEventInfoActivity"
             android:label="@string/app_name"
             />
         <activity
-            android:name=".SingleScheduleActivity"
+            android:name=".activity.SingleScheduleActivity"
             android:label="@string/app_name"
             />
     </application>

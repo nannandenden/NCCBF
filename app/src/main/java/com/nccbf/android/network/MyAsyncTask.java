@@ -1,8 +1,10 @@
-package com.nccbf.android;
+package com.nccbf.android.network;
 
 import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
+
+import com.nccbf.android.pojo.EventPOJO;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
