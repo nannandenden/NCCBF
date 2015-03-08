@@ -1,4 +1,4 @@
-package com.nccbf.android.POJO;
+package com.nccbf.android.pojo;
 
 /**
  * Created by nanden on 2/21/15.

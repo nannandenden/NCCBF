@@ -1,4 +1,4 @@
-package com.nccbf.android.Fragment;
+package com.nccbf.android.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,12 +11,12 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.nccbf.android.POJO.EventPOJO;
 import com.nccbf.android.R;
-import com.nccbf.android.Adapter.ScheduleDetailAdapter;
-import com.nccbf.android.Activity.SingleEventInfoActivity;
+import com.nccbf.android.activity.SingleEventInfoActivity;
+import com.nccbf.android.adapter.ScheduleDetailAdapter;
 import com.nccbf.android.network.APIClient;
 import com.nccbf.android.network.APIName;
+import com.nccbf.android.pojo.EventPOJO;
 
 import org.json.JSONArray;
 import org.json.JSONException;

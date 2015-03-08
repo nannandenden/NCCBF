@@ -1,4 +1,4 @@
-package com.nccbf.android.Activity;
+package com.nccbf.android.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,9 +9,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.nccbf.android.Adapter.ScheduleDetailAdapter;
-import com.nccbf.android.POJO.EventPOJO;
 import com.nccbf.android.R;
+import com.nccbf.android.adapter.ScheduleDetailAdapter;
+import com.nccbf.android.pojo.EventPOJO;
 
 import java.util.ArrayList;
 import java.util.List;

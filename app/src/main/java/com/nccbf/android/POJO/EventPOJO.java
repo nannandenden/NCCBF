@@ -1,4 +1,4 @@
-package com.nccbf.android.POJO;
+package com.nccbf.android.pojo;
 
 import org.json.JSONException;
 import org.json.JSONObject;

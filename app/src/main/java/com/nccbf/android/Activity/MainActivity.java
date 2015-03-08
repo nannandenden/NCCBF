@@ -1,4 +1,4 @@
-package com.nccbf.android.Activity;
+package com.nccbf.android.activity;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -9,12 +9,12 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 
-import com.nccbf.android.Fragment.EventFragment;
-import com.nccbf.android.Fragment.MapFragment;
-import com.nccbf.android.Fragment.ScheduleFragment;
-import com.nccbf.android.Fragment.SocialMediaFragment;
-import com.nccbf.android.POJO.EventPOJO;
 import com.nccbf.android.R;
+import com.nccbf.android.fragment.EventFragment;
+import com.nccbf.android.fragment.MapFragment;
+import com.nccbf.android.fragment.ScheduleFragment;
+import com.nccbf.android.fragment.SocialMediaFragment;
+import com.nccbf.android.pojo.EventPOJO;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.nccbf.android.Activity;
+package com.nccbf.android.activity;
 
 import android.app.Activity;
 import android.content.Intent;

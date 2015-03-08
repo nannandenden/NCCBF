@@ -1,4 +1,4 @@
-package com.nccbf.android.Adapter;
+package com.nccbf.android.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,8 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import com.nccbf.android.POJO.EventPOJO;
 import com.nccbf.android.R;
+import com.nccbf.android.pojo.EventPOJO;
 
 import java.util.List;
 

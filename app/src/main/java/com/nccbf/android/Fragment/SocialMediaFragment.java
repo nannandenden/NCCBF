@@ -1,4 +1,4 @@
-package com.nccbf.android.Fragment;
+package com.nccbf.android.fragment;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -10,9 +10,9 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.nccbf.android.Adapter.SocialMediaDetailAdapter;
-import com.nccbf.android.POJO.SocialMediaPOJO;
 import com.nccbf.android.R;
+import com.nccbf.android.adapter.SocialMediaDetailAdapter;
+import com.nccbf.android.pojo.SocialMediaPOJO;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,14 +1,14 @@
-package com.nccbf.android.Adapter;
+package com.nccbf.android.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.util.Log;
 
-import com.nccbf.android.Fragment.EventFragment;
-import com.nccbf.android.Fragment.MapFragment;
-import com.nccbf.android.Fragment.ScheduleFragment;
-import com.nccbf.android.Fragment.SocialMediaFragment;
+import com.nccbf.android.fragment.EventFragment;
+import com.nccbf.android.fragment.MapFragment;
+import com.nccbf.android.fragment.ScheduleFragment;
+import com.nccbf.android.fragment.SocialMediaFragment;
 
 /**
  * Created by nanden on 2/17/15.

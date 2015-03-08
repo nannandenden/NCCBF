@@ -1,4 +1,4 @@
-package com.nccbf.android.Adapter;
+package com.nccbf.android.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.nccbf.android.R;
-import com.nccbf.android.POJO.SocialMediaPOJO;
+import com.nccbf.android.pojo.SocialMediaPOJO;
 
 import java.util.List;
 
