@@ -15,8 +15,11 @@ import com.nccbf.android.R;
  */
 public class MapFragment extends FragmentActivity{
 
-    static final LatLng HAMBURG = new LatLng(53.558, 9.927);
-    static final LatLng KIEL = new LatLng(53.551, 9.993);
+    //Japantown Peace Plaza 37.785309, -122.429744
+    //Japantown Task Force  37.786379, -122.429301
+
+    static final LatLng PEACEPLAZA = new LatLng(37.785309, -122.429744);
+    static final LatLng TASKFORCE = new LatLng(37.786379, -122.429301);
     private GoogleMap map;
 
 //    @Override
