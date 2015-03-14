@@ -15,6 +15,7 @@
 
     <TextView
         android:id="@+id/event_detail_tv"
+        android:textColor="#000000"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="QUEEN PROGRAM"

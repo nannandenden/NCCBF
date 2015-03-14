@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
 
     <TextView
         android:id="@+id/single_schedule_event_title_tv"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="JCCCNC Stage"
+        android:textColor="#FFFFFF"
+        android:background="#3853A4"
         android:textSize="30sp"
         android:padding="5dp"/>
 
     <ListView
         android:id="@+id/single_schedule_event_lv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        >
 
         </ListView>
 </LinearLayout>

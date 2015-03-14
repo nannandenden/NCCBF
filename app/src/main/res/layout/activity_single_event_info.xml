@@ -20,6 +20,7 @@
         android:layout_height="50dp"
         android:text="LOCATION"
         android:textSize="20sp"
+        android:textColor="#000000"
         />
 
     <TextView
@@ -29,12 +30,16 @@
         android:layout_height="50dp"
         android:text="SCHEDULE"
         android:textSize="20sp"
+        android:textColor="#000000"
         />
 
     <TextView
         android:id="@+id/single_event_discrip_tv"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="The executive committee of the Northern California Cherry Blossom Festival is proud to announce its dates for this year’s festival – April 11, 12 April 18, 19 and is free to the public. The Grand Parade will be on April 19 starting from SF Civic Center and ending in Japantown."
+        android:textColor="#000000"
 
         />
 

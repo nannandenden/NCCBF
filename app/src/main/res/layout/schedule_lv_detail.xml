@@ -10,19 +10,21 @@
         android:id="@+id/event_start_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#000000"
         />
 
     <TextView
         android:id="@+id/event_end_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#000000"
         />
 
     <TextView
         android:id="@+id/event_name_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:textColor="#000000"
         />
 
 
