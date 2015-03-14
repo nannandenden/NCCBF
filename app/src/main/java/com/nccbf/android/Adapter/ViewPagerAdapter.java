@@ -50,7 +50,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
             case 2:
                 MapFragment mapFragment = new MapFragment();
                 Log.d("Banana","Inside MapFragment");
-                return mapFragment;
+//                return mapFragment;
 
             //Open MapFragment.java
             case 3:
