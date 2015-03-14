@@ -11,6 +11,7 @@
         android:layout_height="match_parent"
         android:padding="10dp"
         android:src="@drawable/nccbf_logo"
+        android:background="@color/pink"
         />
 
     <TextView

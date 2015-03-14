@@ -39,19 +39,19 @@ public class SocialMediaFragment extends android.support.v4.app.Fragment {
         mSocialMediaPojos = new ArrayList<SocialMediaPOJO>();
 
         SocialMediaPOJO facebookSocialMediaPojo = new SocialMediaPOJO();
-        facebookSocialMediaPojo.setSocialMediaIcon(R.drawable.nccbf_logo);
+        facebookSocialMediaPojo.setSocialMediaIcon(R.drawable.facebook);
         facebookSocialMediaPojo.setTextView("FaceBook");
         facebookSocialMediaPojo.setLink("https://www.facebook.com/NCCBF");
         mSocialMediaPojos.add(facebookSocialMediaPojo);
 
         SocialMediaPOJO instagramSocialMediaPojo = new SocialMediaPOJO();
-        instagramSocialMediaPojo.setSocialMediaIcon(R.drawable.nccbf_logo);
+        instagramSocialMediaPojo.setSocialMediaIcon(R.drawable.instagram);
         instagramSocialMediaPojo.setTextView("Instagram");
         instagramSocialMediaPojo.setLink("https://instagram.com/nc_cbf/");
         mSocialMediaPojos.add(instagramSocialMediaPojo);
 
         SocialMediaPOJO twitterSocialMediaPojo = new SocialMediaPOJO();
-        twitterSocialMediaPojo.setSocialMediaIcon(R.drawable.nccbf_logo);
+        twitterSocialMediaPojo.setSocialMediaIcon(R.drawable.twitter);
         twitterSocialMediaPojo.setTextView("Twitter");
         twitterSocialMediaPojo.setLink("https://twitter.com/search?q=nc_cbf");
         mSocialMediaPojos.add(twitterSocialMediaPojo);

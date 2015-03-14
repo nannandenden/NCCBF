@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="pink">#F9C2E3</color>
+    <color name="pink">#F48C9E</color>
+    <color name="blue">#3853A4</color>
+    <color name="Internation_Orange">#C0362C</color>
 
 </resources>

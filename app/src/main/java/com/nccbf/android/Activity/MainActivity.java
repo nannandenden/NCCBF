@@ -8,17 +8,14 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-import com.astuetz.PagerSlidingTabStrip;
+import com.nccbf.android.R;
 import com.nccbf.android.adapter.MySpinnerAdapter;
 import com.nccbf.android.adapter.ViewPagerAdapter;
-import com.nccbf.android.R;
 import com.nccbf.android.fragment.EventFragment;
 import com.nccbf.android.fragment.MapFragment;
 import com.nccbf.android.fragment.ScheduleFragment;
@@ -27,7 +24,6 @@ import com.nccbf.android.pojo.EventPOJO;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.zip.Inflater;
 
 public class MainActivity extends ActionBarActivity {
 
