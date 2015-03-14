@@ -4,13 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.astuetz.PagerSlidingTabStrip
-        android:id="@+id/tabs"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        app:pstsTextAllCaps="false"
-        app:pstsTabBackground="@color/pink"
-        />
+
 
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"
@@ -21,7 +15,11 @@
 
         </android.support.v4.view.ViewPager>
 
-
+    <com.astuetz.PagerSlidingTabStrip
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        />
 
 
     </RelativeLayout>

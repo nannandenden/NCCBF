@@ -1,50 +1,75 @@
 package com.nccbf.android.fragment;
 
+import android.location.Location;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapView;
+import com.google.android.gms.maps.MapsInitializer;
+import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.nccbf.android.R;
 
 /**
  * Created by nanden on 2/17/15.
  */
-public class MapFragment extends FragmentActivity{
+public class MapFragment extends Fragment {
 
     //Japantown Peace Plaza 37.785309, -122.429744
     //Japantown Task Force  37.786379, -122.429301
 
     static final LatLng PEACEPLAZA = new LatLng(37.785309, -122.429744);
     static final LatLng TASKFORCE = new LatLng(37.786379, -122.429301);
-    private GoogleMap map;
+    protected MapView mMapView;
+    protected GoogleMap mGoogleMap;
 
-//    @Override
+
+    protected boolean mMarkerPlaced = false;
+
+
+
+
+    //    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         //get the view from fragment_map.xml
         View view = inflater.inflate(R.layout.fragment_map, container,false);
-//        map = ((SupportMapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
-//        map = ((SupportMapFragment) getFragmentManager().findFragmentById(R.id.map))
-//                .getMap();
+        mMapView = (MapView) view.findViewById(R.id.mapView);
 
-//        Marker hamburg = map.addMarker(new MarkerOptions().position(HAMBURG)
-//                .title("Hamburg"));
-//        Marker kiel = map.addMarker(new MarkerOptions()
-//                .position(KIEL)
-//                .title("Kiel")
-//                .snippet("Kiel is cool")
-//                .icon(BitmapDescriptorFactory
-//                        .fromResource(R.drawable.nccbf_logo)));
-//
-//        // Move the camera instantly to hamburg with a zoom of 15.
-//        map.moveCamera(CameraUpdateFactory.newLatLngZoom(HAMBURG, 15));
-//
-//        // Zoom in, animating the camera.
-//        map.animateCamera(CameraUpdateFactory.zoomTo(10), 2000, null);
+
+
+        // Google Map support init
+        mMapView.onCreate(savedInstanceState);
+        mMapView.onResume();
+
+        try {
+            MapsInitializer.initialize(getActivity().getApplicationContext());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        mGoogleMap = mMapView.getMap();
+        mGoogleMap.setMyLocationEnabled(true);
+        mGoogleMap.setOnMyLocationChangeListener(new GoogleMap.OnMyLocationChangeListener() {
+            @Override
+            public void onMyLocationChange(Location arg0) {
+                // Check if a marker has been placed so markers don't stack up
+                if (!mMarkerPlaced) {
+                    mGoogleMap.addMarker(new MarkerOptions().position(new LatLng(arg0.getLatitude(), arg0.getLongitude())));
+                    mMarkerPlaced = true;
+                } else {
+                    mGoogleMap.setOnMyLocationChangeListener(null);
+                }
+            }
+        });
+
+
 
         return view;
     }

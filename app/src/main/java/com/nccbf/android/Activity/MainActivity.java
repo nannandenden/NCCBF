@@ -8,7 +8,16 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
+import com.astuetz.PagerSlidingTabStrip;
+import com.nccbf.android.adapter.MySpinnerAdapter;
+import com.nccbf.android.adapter.ViewPagerAdapter;
 import com.nccbf.android.R;
 import com.nccbf.android.fragment.EventFragment;
 import com.nccbf.android.fragment.MapFragment;
@@ -18,11 +27,13 @@ import com.nccbf.android.pojo.EventPOJO;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.zip.Inflater;
 
 public class MainActivity extends ActionBarActivity {
 
     private static final String TAG = "NCCBF";
     TabsAdapter mTabsAdapter;
+    ViewPagerAdapter mViewPagerAdapter;
     ViewPager mViewPager;
 
     List<EventPOJO> mEventPojos;
@@ -35,8 +46,54 @@ public class MainActivity extends ActionBarActivity {
 
         mViewPager = (ViewPager) findViewById(R.id.pager);
         ActionBar actionBar = getSupportActionBar();
+        MySpinnerAdapter spinnerAdapter = new MySpinnerAdapter(this);
+        List<String> dateList = new ArrayList<String>();
+        dateList.add("April 11");
+        dateList.add("April 12");
+        dateList.add("April 18");
+        dateList.add("April 19");
 
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, dateList);
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+
+
+        View view = getLayoutInflater().inflate(R.layout.spinner_layout, null);
+
+
+        mTabsAdapter = new TabsAdapter(this, mViewPager);
+
+        mTabsAdapter.addTab(actionBar.newTab().setIcon(R.drawable.nccbf_logo), EventFragment.class, null);
+
+        mTabsAdapter.addTab(actionBar.newTab().setIcon(R.drawable.nccbf_logo), ScheduleFragment.class, null);
+
+        mTabsAdapter.addTab(actionBar.newTab().setIcon(R.drawable.nccbf_logo), MapFragment.class, null);
+
+        mTabsAdapter.addTab(actionBar.newTab().setIcon(R.drawable.nccbf_logo), SocialMediaFragment.class, null);
+
+        mViewPager.setAdapter(mTabsAdapter);
+
+        Spinner spinner = (Spinner) view.findViewById(R.id.spinner);
+        spinner.setAdapter(arrayAdapter);
+        spinner.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Fragment selectedFragment = mTabsAdapter.getItem(mViewPager.getCurrentItem());
+
+//                selectedFragment.
+
+
+            }
+        });
+
+        actionBar.setCustomView(view);
+
+        actionBar.setDisplayShowCustomEnabled(true);
+
+//        mViewPager = (ViewPager) findViewById(R.id.pager);
+//        mViewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager()));
+//
+//        PagerSlidingTabStrip pageSliderWidget = (PagerSlidingTabStrip) findViewById(R.id.tabs);
+//        pageSliderWidget.setViewPager(mViewPager);
 
 
 //        MyAsyncTask task = new MyAsyncTask(this, new MyAsyncTask.OnDataReturnListener() {
@@ -52,25 +109,28 @@ public class MainActivity extends ActionBarActivity {
 //            }
 //        });
 //
+//        mViewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
+//
+//        mViewPager.setAdapter(mViewPagerAdapter);
+
+
 //
 //        task.execute(new Object());
 
-        mTabsAdapter = new TabsAdapter(this, mViewPager);
 
-        mTabsAdapter.addTab(actionBar.newTab().setIcon(R.drawable.nccbf_logo), EventFragment.class, null);
 
-        mTabsAdapter.addTab(actionBar.newTab().setIcon(R.drawable.nccbf_logo), ScheduleFragment.class, null);
-
-        mTabsAdapter.addTab(actionBar.newTab().setIcon(R.drawable.nccbf_logo), MapFragment.class, null);
-
-        mTabsAdapter.addTab(actionBar.newTab().setIcon(R.drawable.nccbf_logo), SocialMediaFragment.class, null);
-
-        mViewPager.setAdapter(mTabsAdapter);
 
 
     }
 
 
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        getMenuInflater().inflate(R.menu.menu_main, menu);
+//        MenuItem item = menu.findItem(R.id.action_change_content); // id of our custom menu item
+//        Spinner spinner = (Spinner) item.getActionView().findViewById(R.id.spinner);
+//        return true;
+//    }
 
     public static class TabsAdapter extends FragmentStatePagerAdapter
         implements ActionBar.TabListener, ViewPager.OnPageChangeListener {

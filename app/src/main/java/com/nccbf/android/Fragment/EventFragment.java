@@ -33,6 +33,7 @@ public class EventFragment extends android.support.v4.app.Fragment{
     private ListView mListView;
     private List<EventPOJO> mEvents;
     private Handler mHandler;
+    private int mSelectedDate = 0;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -104,5 +105,12 @@ public class EventFragment extends android.support.v4.app.Fragment{
         });
 
         return view;
+    }
+
+
+    public void setDate(int n){
+        mSelectedDate = n;
+
+        mEventDetailAdapter.getFilter().filter(Integer.toString(n));
     }
 }
