@@ -11,7 +11,7 @@ import android.support.v7.app.ActionBarActivity;
 
 import com.nccbf.android.R;
 import com.nccbf.android.fragment.EventFragment;
-import com.nccbf.android.fragment.MapFragment;
+import com.nccbf.android.fragment.MyMapFragment;
 import com.nccbf.android.fragment.ScheduleFragment;
 import com.nccbf.android.fragment.SocialMediaFragment;
 import com.nccbf.android.pojo.EventPOJO;
@@ -61,7 +61,7 @@ public class MainActivity extends ActionBarActivity {
 
         mTabsAdapter.addTab(actionBar.newTab().setIcon(R.drawable.nccbf_logo), ScheduleFragment.class, null);
 
-        mTabsAdapter.addTab(actionBar.newTab().setIcon(R.drawable.nccbf_logo), MapFragment.class, null);
+        mTabsAdapter.addTab(actionBar.newTab().setIcon(R.drawable.nccbf_logo), MyMapFragment.class, null);
 
         mTabsAdapter.addTab(actionBar.newTab().setIcon(R.drawable.nccbf_logo), SocialMediaFragment.class, null);
 

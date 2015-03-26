@@ -5,8 +5,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.util.Log;
 
+import com.google.android.gms.maps.MapFragment;
 import com.nccbf.android.fragment.EventFragment;
-import com.nccbf.android.fragment.MapFragment;
 import com.nccbf.android.fragment.ScheduleFragment;
 import com.nccbf.android.fragment.SocialMediaFragment;
 
